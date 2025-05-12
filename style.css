@@ -1,127 +1,41 @@
-/* style.css */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #ffe6e6, #ffe0f0);
-  color: #5a1a1a;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.container {
-  text-align: center;
-  background-color: #ffffffcc;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  max-width: 600px;
-  width: 100%;
-  transition: all 0.3s ease-in-out;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-#infoText {
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  color: #c14466;
-}
-
 .countdown {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-bottom: 30px;
 }
 
 .countdown div {
-  font-size: 1.2rem;
   background-color: #fff0f5;
-  padding: 15px;
+  padding: 20px 15px;
   border-radius: 10px;
-  min-width: 70px;
-  flex: 1;
+  min-width: 65px;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .countdown span {
   font-size: 2.2rem;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-  display: block;
   color: #d6336c;
-}
-
-.greeting {
-  animation: fadeIn 1s ease-in-out;
-}
-
-.greeting h2 {
-  font-size: 1.6rem;
-  color: #b30059;
-  margin-bottom: 10px;
-}
-
-.greeting p {
-  margin-bottom: 20px;
-  font-size: 1rem;
-}
-
-button {
-  background-color: #ff66a3;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 15px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background-color: #e60073;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  display: block;
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 600px) {
   .countdown {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
   }
 
   .countdown div {
-    font-size: 1rem;
-    min-width: unset;
-    width: 80%;
-    padding: 10px 0;
+    padding: 15px 10px;
+    min-width: 55px;
   }
 
   .countdown span {
     font-size: 1.8rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .container {
-    padding: 20px;
   }
 }
