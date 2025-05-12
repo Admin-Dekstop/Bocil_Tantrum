@@ -40,28 +40,27 @@ h1 {
 
 .countdown {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 10px;
-  flex-wrap: nowrap;
   margin-bottom: 30px;
 }
 
-.countdown div {
+.time-box {
+  flex: 1 1 45%;
+  max-width: 120px;
+  font-size: 1.2rem;
   background-color: #fff0f5;
-  padding: 20px 15px;
+  padding: 15px 10px;
   border-radius: 10px;
-  min-width: 65px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.countdown span {
-  font-size: 2.2rem;
-  font-family: 'Courier New', Courier, monospace;
+.time-box span {
+  font-size: 2rem;
   font-weight: bold;
-  color: #d6336c;
   display: block;
-  margin-bottom: 5px;
+  color: #d6336c;
 }
 
 .greeting {
@@ -100,17 +99,25 @@ button:hover {
 }
 
 @media screen and (max-width: 600px) {
-  .countdown {
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
+  .time-box {
+    flex: 1 1 45%;
+    font-size: 1rem;
+    max-width: 100px;
   }
 
-  .countdown div {
-    padding: 15px 10px;
-    min-width: 55px;
+  .time-box span {
+    font-size: 1.5rem;
   }
 
-  .countdown span {
-    font-size: 1.8rem;
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
   }
 }
