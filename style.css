@@ -1,3 +1,5 @@
+/* style.css */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -39,20 +41,24 @@ h1 {
 
 .countdown {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
   margin-bottom: 30px;
 }
 
 .countdown div {
   font-size: 1.2rem;
   background-color: #fff0f5;
-  padding: 10px 15px;
+  padding: 15px;
   border-radius: 10px;
-  min-width: 60px;
+  min-width: 70px;
+  flex: 1;
+  text-align: center;
 }
 
 .countdown span {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   display: block;
   color: #d6336c;
@@ -96,15 +102,19 @@ button:hover {
 @media screen and (max-width: 600px) {
   .countdown {
     flex-direction: column;
+    align-items: center;
     gap: 15px;
   }
 
   .countdown div {
     font-size: 1rem;
+    min-width: unset;
+    width: 80%;
+    padding: 10px 0;
   }
 
   .countdown span {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   h1 {
