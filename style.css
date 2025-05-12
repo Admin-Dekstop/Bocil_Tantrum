@@ -1,101 +1,84 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Comic Neue', cursive;
-  background: linear-gradient(to right, #ffdde1, #ee9ca7);
-  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f9c5d1, #fbd786);
+  color: #fff;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
+  text-align: center;
+  padding: 20px;
 }
 
 .container {
-  text-align: center;
-  padding: 2rem;
-}
-
-h1, h2 {
-  margin: 1rem 0;
-}
-
-#countdown {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 2rem 0;
-}
-
-#countdown div {
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  min-width: 60px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-#birthdayMessage {
-  margin-top: 2rem;
-}
-
-#birthdayMessage button {
-  padding: 10px 20px;
-  background-color: #ff4081;
-  border: none;
-  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
   border-radius: 20px;
-  cursor: pointer;
-  font-size: 1em;
-  margin-top: 1rem;
-}
-
-#galleryPage {
-  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  max-width: 500px;
   width: 100%;
-  text-align: center;
+  backdrop-filter: blur(10px);
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+.judul {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
-.gallery img {
-  width: 100%;
+.countdown {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.countdown div {
+  flex: 1 1 40%;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
   border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
+.countdown span {
+  font-size: 2em;
+  display: block;
+  color: #fff;
 }
 
-#romanticText {
-  margin-top: 1rem;
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #d63384;
+small {
+  font-size: 0.9em;
+  color: #eee;
 }
 
 .hidden {
   display: none;
 }
 
-@media (max-width: 600px) {
-  #countdown {
-    gap: 0.5rem;
-  }
+#birthdayMessage h2 {
+  color: #fff;
+}
 
-  #countdown div {
-    padding: 0.5rem;
-    font-size: 0.9rem;
-  }
+#lihatBtn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background-color: #ff5e78;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-  #birthdayMessage button {
-    font-size: 0.9em;
+#lihatBtn:hover {
+  background-color: #ff3366;
+}
+
+@media (max-width: 480px) {
+  .countdown div {
+    flex: 1 1 100%;
   }
 }
