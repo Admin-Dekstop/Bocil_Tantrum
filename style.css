@@ -1,84 +1,117 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #f9c5d1, #fbd786);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(to right, #ffe6e6, #ffe0f0);
+  color: #5a1a1a;
   min-height: 100vh;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  background-color: #ffffffcc;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 600px;
   width: 100%;
-  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
 }
 
-.judul {
-  font-size: 1.8em;
+h1 {
+  font-size: 2rem;
   margin-bottom: 10px;
-  color: #fff;
+}
+
+#infoText {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #c14466;
 }
 
 .countdown {
   display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
 }
 
 .countdown div {
-  flex: 1 1 40%;
-  margin: 10px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 15px;
+  font-size: 1.2rem;
+  background-color: #fff0f5;
+  padding: 10px 15px;
   border-radius: 10px;
+  min-width: 60px;
 }
 
 .countdown span {
-  font-size: 2em;
+  font-size: 2rem;
+  font-weight: bold;
   display: block;
-  color: #fff;
+  color: #d6336c;
 }
 
-small {
-  font-size: 0.9em;
-  color: #eee;
+.greeting {
+  animation: fadeIn 1s ease-in-out;
 }
 
-.hidden {
-  display: none;
+.greeting h2 {
+  font-size: 1.6rem;
+  color: #b30059;
+  margin-bottom: 10px;
 }
 
-#birthdayMessage h2 {
-  color: #fff;
+.greeting p {
+  margin-bottom: 20px;
+  font-size: 1rem;
 }
 
-#lihatBtn {
-  margin-top: 20px;
-  padding: 12px 25px;
+button {
+  background-color: #ff66a3;
+  color: white;
   border: none;
-  background-color: #ff5e78;
-  color: #fff;
-  font-size: 1em;
-  border-radius: 10px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
-#lihatBtn:hover {
-  background-color: #ff3366;
+button:hover {
+  background-color: #e60073;
 }
 
-@media (max-width: 480px) {
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@media screen and (max-width: 600px) {
+  .countdown {
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .countdown div {
-    flex: 1 1 100%;
+    font-size: 1rem;
+  }
+
+  .countdown span {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 20px;
   }
 }
