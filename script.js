@@ -1,33 +1,50 @@
-const countdown = document.getElementById('countdown');
-const birthdayMessage = document.getElementById('birthdayMessage');
-const romanticMusic = document.getElementById('romanticMusic');
-const lihatBtn = document.getElementById('lihatBtn');
+// Set tanggal target (contoh: 12 Mei 2025 pukul 21:00 WITA)
+const targetDate = new Date("2025-05-12T21:00:00+08:00").getTime();
 
-const targetDate = new Date("2025-05-10T00:00:00").getTime(); // Ganti tanggal sesuai momenmu
+// Elemen yang akan dipakai
+const daysEl = document.getElementById("days");
+const hoursEl = document.getElementById("hours");
+const minutesEl = document.getElementById("minutes");
+const secondsEl = document.getElementById("seconds");
+const infoText = document.getElementById("infoText");
+const countdown = document.querySelector(".countdown");
+const greeting = document.querySelector(".greeting");
 
-const interval = setInterval(() => {
+// Update countdown setiap detik
+const timer = setInterval(updateCountdown, 1000);
+
+function updateCountdown() {
   const now = new Date().getTime();
   const distance = targetDate - now;
+
+  if (distance <= 0) {
+    clearInterval(timer);
+    showGreeting();
+    return;
+  }
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById('days').innerText = days < 10 ? '0' + days : days;
-  document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
-  document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
-  document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+  daysEl.innerText = days;
+  hoursEl.innerText = hours;
+  minutesEl.innerText = minutes;
+  secondsEl.innerText = seconds;
+}
 
-  if (distance <= 0) {
-    clearInterval(interval);
-    countdown.style.display = 'none';
-    birthdayMessage.classList.remove('hidden');
-    romanticMusic.removeAttribute('hidden');
-    romanticMusic.play();
-  }
-}, 1000);
+function showGreeting() {
+  countdown.style.display = "none";
+  infoText.style.display = "none";
+  greeting.style.display = "block";
 
-lihatBtn.addEventListener('click', () => {
+  // Play music romantis
+  const audio = new Audio("romantis.mp3"); // ganti dengan nama file kamu
+  audio.play();
+}
+
+// Event tombol selengkapnya
+document.getElementById("nextPage").addEventListener("click", () => {
   window.location.href = "halaman2.html";
 });
