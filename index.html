@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Countdown Menuju Hari Spesial</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Detik-Detik Menuju Hari Spesial</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1 class="judul">Countdown Menuju Hari Spesial</h1>
-    <p id="infoText">Waktu tersisa:</p>
+    <h1>Detik-Detik Menuju Hari Spesial</h1>
+    <p id="infoText">Waktu menuju momen spesial kita tinggal:</p>
     <div class="countdown" id="countdown">
-      <div><span id="days">00</span><small>Hari</small></div>
-      <div><span id="hours">00</span><small>Jam</small></div>
-      <div><span id="minutes">00</span><small>Menit</small></div>
-      <div><span id="seconds">00</span><small>Detik</small></div>
+      <div><span id="days">00</span><br>Hari</div>
+      <div><span id="hours">00</span><br>Jam</div>
+      <div><span id="minutes">00</span><br>Menit</div>
+      <div><span id="seconds">00</span><br>Detik</div>
     </div>
 
-    <div id="birthdayMessage" class="hidden">
-      <h2>🎉 Selamat Ulang Tahun! 🎂</h2>
-      <p id="ucapan">Hari ini adalah hari istimewamu. Terima kasih telah hadir di hidupku 💖</p>
-      <audio id="romanticMusic" controls autoplay hidden>
-        <source src="musik.mp3" type="audio/mp3">
-        Browser kamu tidak mendukung pemutar audio.
-      </audio>
-      <button id="lihatBtn">Lihat Selengkapnya</button>
+    <div class="greeting" id="greeting" style="display: none;">
+      <h2>🎉 Selamat Ulang Tahun, Sayang! 🎉</h2>
+      <p>Kau adalah alasan senyum ini tak pernah hilang. Terima kasih sudah hadir dalam hidupku 💖</p>
+      <button id="lihatSelengkapnya">Lihat Selengkapnya</button>
     </div>
+
+    <audio id="romanticMusic" loop>
+      <source src="music.mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung audio.
+    </audio>
   </div>
 
   <script src="script.js"></script>
