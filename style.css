@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  max-width: 600px;
+  width: 90%;
+}
+
+#judul {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em;
+  color: #e84393;
+  margin-bottom: 20px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.countdown div {
+  background: #ffe6f0;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 60px;
+}
+
+.countdown span {
+  font-size: 2em;
+  color: #d63031;
+}
+
+.countdown small {
+  display: block;
+  font-size: 0.8em;
+  color: #636e72;
+}
+
+.hidden {
+  display: none;
+}
+
+#ucapan h2 {
+  color: #e84393;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+#pesanRomantis {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+#btnSelengkapnya {
+  background: #e84393;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#btnSelengkapnya:hover {
+  background: #c0392b;
+}
