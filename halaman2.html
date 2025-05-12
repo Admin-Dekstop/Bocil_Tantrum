@@ -8,40 +8,41 @@
 </head>
 <body>
   <div class="gallery-container">
-    <h2>Kenangan Indah Bersama 💖</h2>
-    <div class="photo-grid">
-      <!-- Foto-foto 1 s/d 8 -->
-      <div class="photo" data-message="Kamu adalah alasan aku tersenyum setiap hari ❤️">
+    <h1>Kenangan Indah Bersamamu 💞</h1>
+    <div class="gallery">
+      <!-- 8 Foto dengan klik muncul kata romantis -->
+      <div class="photo" onclick="showMessage(0)">
         <img src="foto/foto1.jpg" alt="Foto 1" />
       </div>
-      <div class="photo" data-message="Tatapanmu bikin dunia terasa lebih indah 😍">
+      <div class="photo" onclick="showMessage(1)">
         <img src="foto/foto2.jpg" alt="Foto 2" />
       </div>
-      <div class="photo" data-message="Genggaman tanganmu adalah rumah teraman 🫶">
+      <div class="photo" onclick="showMessage(2)">
         <img src="foto/foto3.jpg" alt="Foto 3" />
       </div>
-      <div class="photo" data-message="Kamu itu versi terbaik dari kata 'sempurna' ✨">
+      <div class="photo" onclick="showMessage(3)">
         <img src="foto/foto4.jpg" alt="Foto 4" />
       </div>
-      <div class="photo" data-message="Saat bersamamu, waktu terasa berhenti ⏳">
+      <div class="photo" onclick="showMessage(4)">
         <img src="foto/foto5.jpg" alt="Foto 5" />
       </div>
-      <div class="photo" data-message="Cintaku padamu tak akan pernah pudar 💌">
+      <div class="photo" onclick="showMessage(5)">
         <img src="foto/foto6.jpg" alt="Foto 6" />
       </div>
-      <div class="photo" data-message="Langit pun iri melihatmu bersinar ☁️🌟">
+      <div class="photo" onclick="showMessage(6)">
         <img src="foto/foto7.jpg" alt="Foto 7" />
       </div>
-      <div class="photo" data-message="Kamu membuat hari-hariku lebih berwarna 🌈">
+      <div class="photo" onclick="showMessage(7)">
         <img src="foto/foto8.jpg" alt="Foto 8" />
       </div>
     </div>
   </div>
 
-  <div id="popup" class="hidden">
+  <!-- Pop-up kata romantis -->
+  <div id="popup" class="popup">
     <div class="popup-content">
-      <p id="popupText"></p>
-      <button onclick="closePopup()">Tutup</button>
+      <span class="close" onclick="closePopup()">&times;</span>
+      <p id="popup-text">Kata romantis muncul di sini...</p>
     </div>
   </div>
 
