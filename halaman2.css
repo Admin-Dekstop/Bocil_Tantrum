@@ -1,43 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background: linear-gradient(to right, #fad0c4, #ffd1ff);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+}
+
+.popup-content {
+  background-color: #fff;
+  border-radius: 10px;
   padding: 20px;
   text-align: center;
-}
-
-.gallery-container h1 {
-  color: #d63031;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 15px;
-  margin-bottom: 30px;
-}
-
-.foto img {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
   width: 100%;
-  border-radius: 15px;
-  transition: transform 0.3s ease;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
   cursor: pointer;
-  border: 3px solid #ffcad4;
+  margin-top: 10px;
 }
 
-.foto img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+button:hover {
+  background-color: #0056b3;
 }
 
-#kataRomantis {
-  font-size: 1.1em;
-  color: #b33939;
-  font-style: italic;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 10px;
+.hidden {
+  display: none;
 }
