@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ucapan Ulang Tahun Romantis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hari Spesial</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1 id="judul">Menuju Hari Spesial</h1>
-
-    <div class="countdown" id="countdown">
+    <h1 id="judul">Countdown Menuju Hari Spesial</h1>
+    <div id="countdown">
       <div><span id="days">00</span><small>Hari</small></div>
       <div><span id="hours">00</span><small>Jam</small></div>
       <div><span id="minutes">00</span><small>Menit</small></div>
       <div><span id="seconds">00</span><small>Detik</small></div>
     </div>
 
-    <div id="ucapan" class="hidden">
-      <h2>🎉 Selamat Ulang Tahun, Cintaku! 🎉</h2>
-      <p id="pesanRomantis">
-        Ini adalah momen spesial yang sudah kutunggu-tunggu. Kata-kata romantis akan kamu isi sendiri nanti 😍
-      </p>
-      <button id="btnSelengkapnya">Baca Selengkapnya</button>
+    <div id="birthdayMessage" class="hidden">
+      <h2>🎉 Selamat Ulang Tahun Cintaku! 🎉</h2>
+      <p>Kamu adalah hadiah terindah dalam hidupku. Semoga hari ini seindah senyumanmu 💖</p>
+      <audio id="romanticMusic" src="assets/music.mp3" autoplay loop></audio>
+      <button id="selengkapnyaBtn">Lihat Selengkapnya 💌</button>
     </div>
+  </div>
 
-    <audio id="musikRomantis" src="audio/musik.mp3" preload="auto"></audio>
+  <!-- Halaman Galeri (muncul setelah klik "Selengkapnya") -->
+  <div id="galleryPage" class="hidden">
+    <h2>Galeri Cinta Kita</h2>
+    <div class="gallery">
+      <!-- Contoh template, kamu tinggal ganti src -->
+      <div class="photo" data-message="Kamu selalu terlihat cantik di foto ini 🥰">
+        <img src="assets/images/foto1.jpg" alt="Foto 1">
+      </div>
+      <div class="photo" data-message="Senyumanmu membuat hariku selalu indah 😍">
+        <img src="assets/images/foto2.jpg" alt="Foto 2">
+      </div>
+      <div class="photo" data-message="Momen ini tidak akan pernah kulupakan ❤️">
+        <img src="assets/images/foto3.jpg" alt="Foto 3">
+      </div>
+      <div class="photo" data-message="Aku bersyukur setiap hari karena memilikimu 💕">
+        <img src="assets/images/foto4.jpg" alt="Foto 4">
+      </div>
+      <div class="photo" data-message="Cinta kita tumbuh bersama waktu 💞">
+        <img src="assets/images/foto5.jpg" alt="Foto 5">
+      </div>
+      <div class="photo" data-message="Tidak ada yang bisa menggantikanmu 😘">
+        <img src="assets/images/foto6.jpg" alt="Foto 6">
+      </div>
+      <div class="photo" data-message="Hari-hariku lebih lengkap denganmu 🎁">
+        <img src="assets/images/foto7.jpg" alt="Foto 7">
+      </div>
+      <div class="photo" data-message="Kamu dan aku, selamanya 💍">
+        <img src="assets/images/foto8.jpg" alt="Foto 8">
+      </div>
+    </div>
+    <div id="romanticText"></div>
   </div>
 
   <script src="script.js"></script>
