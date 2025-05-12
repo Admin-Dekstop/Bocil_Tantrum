@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+body {
+  background: linear-gradient(to right, #fad0c4, #ffd1ff);
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery-container h1 {
+  color: #d63031;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.foto img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border: 3px solid #ffcad4;
+}
+
+.foto img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+#kataRomantis {
+  font-size: 1.1em;
+  color: #b33939;
+  font-style: italic;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+}
