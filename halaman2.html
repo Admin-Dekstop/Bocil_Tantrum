@@ -3,40 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Galeri Kenangan Kita</title>
+  <title>Galeri Cinta</title>
   <link rel="stylesheet" href="halaman2.css" />
 </head>
 <body>
   <div class="gallery-container">
-    <h1>Kenangan Manis Kita</h1>
-    <div class="gallery">
-      <!-- 8 Foto -->
-      <div class="foto" data-kata="Kamu adalah alasan kenapa aku tersenyum setiap hari ❤️">
-        <img src="foto/foto1.jpg" alt="Foto 1">
+    <h2>Kenangan Indah Bersama 💖</h2>
+    <div class="photo-grid">
+      <!-- Foto-foto 1 s/d 8 -->
+      <div class="photo" data-message="Kamu adalah alasan aku tersenyum setiap hari ❤️">
+        <img src="foto/foto1.jpg" alt="Foto 1" />
       </div>
-      <div class="foto" data-kata="Bersamamu adalah bagian terindah dalam hidupku 💕">
-        <img src="foto/foto2.jpg" alt="Foto 2">
+      <div class="photo" data-message="Tatapanmu bikin dunia terasa lebih indah 😍">
+        <img src="foto/foto2.jpg" alt="Foto 2" />
       </div>
-      <div class="foto" data-kata="Setiap detik bersamamu terasa seperti surga 🥰">
-        <img src="foto/foto3.jpg" alt="Foto 3">
+      <div class="photo" data-message="Genggaman tanganmu adalah rumah teraman 🫶">
+        <img src="foto/foto3.jpg" alt="Foto 3" />
       </div>
-      <div class="foto" data-kata="Aku tak butuh alasan untuk mencintaimu... aku hanya butuh kamu 💌">
-        <img src="foto/foto4.jpg" alt="Foto 4">
+      <div class="photo" data-message="Kamu itu versi terbaik dari kata 'sempurna' ✨">
+        <img src="foto/foto4.jpg" alt="Foto 4" />
       </div>
-      <div class="foto" data-kata="Kalau kamu senyum, dunia rasanya ikut bahagia ☀️">
-        <img src="foto/foto5.jpg" alt="Foto 5">
+      <div class="photo" data-message="Saat bersamamu, waktu terasa berhenti ⏳">
+        <img src="foto/foto5.jpg" alt="Foto 5" />
       </div>
-      <div class="foto" data-kata="Cintaku padamu seperti kopi pagi: hangat dan bikin semangat ☕❤️">
-        <img src="foto/foto6.jpg" alt="Foto 6">
+      <div class="photo" data-message="Cintaku padamu tak akan pernah pudar 💌">
+        <img src="foto/foto6.jpg" alt="Foto 6" />
       </div>
-      <div class="foto" data-kata="Aku ingin bersamamu, sekarang, nanti, dan selamanya 🌙">
-        <img src="foto/foto7.jpg" alt="Foto 7">
+      <div class="photo" data-message="Langit pun iri melihatmu bersinar ☁️🌟">
+        <img src="foto/foto7.jpg" alt="Foto 7" />
       </div>
-      <div class="foto" data-kata="Dari semua kisah cinta, kita adalah favoritku 📖❤️">
-        <img src="foto/foto8.jpg" alt="Foto 8">
+      <div class="photo" data-message="Kamu membuat hari-hariku lebih berwarna 🌈">
+        <img src="foto/foto8.jpg" alt="Foto 8" />
       </div>
     </div>
-    <p id="kataRomantis"></p>
+  </div>
+
+  <div id="popup" class="hidden">
+    <div class="popup-content">
+      <p id="popupText"></p>
+      <button onclick="closePopup()">Tutup</button>
+    </div>
   </div>
 
   <script src="halaman2.js"></script>
