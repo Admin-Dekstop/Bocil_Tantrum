@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Countdown Spesial</title>
+  <title>Countdown Hari Spesial</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Countdown Menuju Hari Spesial</h1>
-    <div id="infoText">Tunggu sampai waktunya tiba yaa :)</div>
+    <h1>Menuju Hari Spesial</h1>
+    <p id="infoText">Waktu menuju momen indah bersama!</p>
     <div class="countdown">
-      <div><span id="days">0</span>Hari</div>
-      <div><span id="hours">0</span>Jam</div>
-      <div><span id="minutes">0</span>Menit</div>
-      <div><span id="seconds">0</span>Detik</div>
+      <div class="time-box"><span id="days">00</span><label>Hari</label></div>
+      <div class="time-box"><span id="hours">00</span><label>Jam</label></div>
+      <div class="time-box"><span id="minutes">00</span><label>Menit</label></div>
+      <div class="time-box"><span id="seconds">00</span><label>Detik</label></div>
     </div>
-    <div class="greeting" id="greeting" style="display: none;">
-      <h2>Selamat Ulang Tahun!</h2>
-      <p>Semoga hari ini penuh cinta dan kebahagiaan 💖</p>
-      <button onclick="location.href='halaman2.html'">Lihat Selengkapnya</button>
+    <div id="greeting" class="greeting" style="display: none;">
+      <h2>Selamat Hari Spesial!</h2>
+      <p>Hari ini adalah hari kita! 💖</p>
+      <button onclick="window.location.href='halaman2.html'">Lihat Selengkapnya</button>
     </div>
   </div>
-  <audio id="romanticMusic" src="musik/romantis.mp3"></audio>
+
+  <audio id="romanticMusic" src="music.mp3"></audio>
   <script src="script.js"></script>
 </body>
 </html>
