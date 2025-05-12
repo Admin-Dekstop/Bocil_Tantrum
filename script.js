@@ -1,5 +1,5 @@
 // Set tanggal target (contoh: 12 Mei 2025 pukul 21:00 WITA)
-const targetDate = new Date("2025-05-12322:00:00+08:00").getTime();
+const targetDate = new Date("2025-05-12T21:00:00+08:00").getTime();
 
 // Elemen yang akan dipakai
 const daysEl = document.getElementById("days");
@@ -28,10 +28,10 @@ function updateCountdown() {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  daysEl.innerText = days;
-  hoursEl.innerText = hours;
-  minutesEl.innerText = minutes;
-  secondsEl.innerText = seconds;
+  daysEl.innerText = String(days).padStart(2, '0');
+  hoursEl.innerText = String(hours).padStart(2, '0');
+  minutesEl.innerText = String(minutes).padStart(2, '0');
+  secondsEl.innerText = String(seconds).padStart(2, '0');
 }
 
 function showGreeting() {
