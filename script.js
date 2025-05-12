@@ -1,4 +1,4 @@
-const countdownDate = new Date("2025-05-15T00:00:00+08:00").getTime(); // ganti sesuai tanggalmu
+const countdownDate = new Date("2025-05-12T19:00:00+08:00").getTime(); // ganti sesuai tanggalmu
 const countdownEl = document.getElementById("countdown");
 const ucapanEl = document.getElementById("ucapan");
 const musik = document.getElementById("musikRomantis");
