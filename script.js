@@ -1,4 +1,4 @@
-// Set tanggal target (contoh: 12 Mei 2025 pukul 21:00 WITA)
+// Set tanggal target (contoh: 13 Mei 2025 pukul 16:00 WITA)
 const targetDate = new Date("2025-05-13T16:00:00+08:00").getTime();
 
 // Elemen yang akan dipakai
@@ -9,6 +9,7 @@ const secondsEl = document.getElementById("seconds");
 const infoText = document.getElementById("infoText");
 const countdown = document.querySelector(".countdown");
 const greeting = document.querySelector(".greeting");
+const romanticMusic = document.getElementById("romanticMusic"); // Ambil audio dari HTML
 
 // Update countdown setiap detik
 const timer = setInterval(updateCountdown, 1000);
@@ -39,12 +40,13 @@ function showGreeting() {
   infoText.style.display = "none";
   greeting.style.display = "block";
 
-  // Play music romantis
-  const audio = new Audio("music.mp3"); // ganti dengan nama file kamu
-  audio.play();
+  // Putar musik dari elemen audio HTML
+  romanticMusic.play().catch(error => {
+    console.log("Autoplay gagal, perlu interaksi user dulu:", error);
+  });
 }
 
 // Event tombol selengkapnya
-document.getElementById("nextPage").addEventListener("click", () => {
+document.getElementById("nextPage")?.addEventListener("click", () => {
   window.location.href = "halaman2.html";
 });
