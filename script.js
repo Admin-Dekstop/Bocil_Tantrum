@@ -40,7 +40,7 @@ function showGreeting() {
   greeting.style.display = "block";
 
   // Play music romantis
-  const audio = new Audio("romantis.mp3"); // ganti dengan nama file kamu
+  const audio = new Audio("music.mp3"); // ganti dengan nama file kamu
   audio.play();
 }
 
