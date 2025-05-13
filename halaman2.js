@@ -34,3 +34,16 @@ popup.addEventListener('click', (e) => {
     popup.style.display = 'none';
   }
 });
+
+// ---------------------------
+// Fungsi Tambahan: Musik Otomatis
+// ---------------------------
+const music = document.getElementById('bgMusic');
+
+window.addEventListener('click', () => {
+  if (music && music.paused) {
+    music.play().catch(err => {
+      console.warn('Pemutaran musik dicegah oleh browser:', err);
+    });
+  }
+});
