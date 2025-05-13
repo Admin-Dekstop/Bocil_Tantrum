@@ -1,5 +1,5 @@
 // Set tanggal target (contoh: 13 Mei 2025 pukul 16:00 WITA)
-const targetDate = new Date("2025-05-14T10:00:00+08:00").getTime();
+const targetDate = new Date("2025-05-13T20:40:00+08:00").getTime();
 
 // Elemen yang akan dipakai
 const daysEl = document.getElementById("days");
