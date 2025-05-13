@@ -10,12 +10,14 @@
   <div class="container">
     <h1>Menuju Hari Spesial</h1>
     <p id="infoText">Waktu menuju momen indah bersama!</p>
+    
     <div class="countdown">
       <div class="time-box"><span id="days">00</span><label>Hari</label></div>
       <div class="time-box"><span id="hours">00</span><label>Jam</label></div>
       <div class="time-box"><span id="minutes">00</span><label>Menit</label></div>
       <div class="time-box"><span id="seconds">00</span><label>Detik</label></div>
     </div>
+
     <div id="greeting" class="greeting" style="display: none;">
       <h2>Selamat Hari Spesial!</h2>
       <p>Hari ini adalah hari kita! 💖</p>
@@ -23,7 +25,10 @@
     </div>
   </div>
 
-  <audio id="romanticMusic" src="music.mp3"></audio>
+  <!-- Audio yang akan diputar saat waktu habis -->
+  <audio id="romanticMusic" src="music.mp3" preload="auto"></audio>
+
+  <!-- Script Countdown -->
   <script src="script.js"></script>
 </body>
 </html>
