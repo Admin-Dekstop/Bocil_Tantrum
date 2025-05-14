@@ -12,7 +12,7 @@ const greeting = document.querySelector(".greeting");
 const romanticMusic = document.getElementById("romanticMusic"); // Ambil audio dari HTML
 
 // Update countdown setiap detik
-const timer = setInterval(updateCountdown, 1000);
+const timer = setInterval(updateCountdown, 10);
 
 function updateCountdown() {
   const now = new Date().getTime();
