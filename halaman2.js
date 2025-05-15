@@ -5,13 +5,13 @@ const closeBtn = document.querySelector('.close');
 
 // Kata-kata romantis sesuai urutan foto (bisa kamu ganti sesuka hati)
 const romanticTexts = [
-  "Tatapanmu lebih hangat dari matahari pagi.",
+  "Tatapanmu lebih hangat dari matahari pagi😌🥰.",
   " alasan senyumku setiap hari😊.",
-  " bersyukur kamu hadir dalam hidupku.",
+  " bersyukur kamu hadir dalam hidupku😆.",
   "si bocil kuat makan pedis 🙄.",
   "si bocil kuat bobo🤣.",
-  "kapan ini dspa jawab aku cil 🥺🥺.",
-  "Setiap momen denganmu adalah kenangan indah.",
+  "kapan ini dapa jawaban aku cil 🥺🥺.",
+  "Setiap momen denganmu adalah kenangan indah🥰😍.",
   "si tantrum yang bikin rindu anjay😆😆😆."
 ];
 
